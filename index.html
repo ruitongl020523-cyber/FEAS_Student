@@ -21,38 +21,30 @@ body{font-family:'Inter',-apple-system,sans-serif;overflow:hidden;width:100vw;he
 .ni{padding:7px 16px;border-radius:100px;font-size:12px;font-weight:500;color:rgba(0,0,0,0.5);cursor:pointer;transition:all 0.2s;white-space:nowrap;display:flex;align-items:center;gap:5px}
 .ni:hover{color:rgba(0,0,0,0.75);background:rgba(255,255,255,0.4)}
 .ni.on{background:rgba(255,255,255,0.65);color:rgba(0,0,0,0.88);font-weight:600;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
-/* Typography - improved contrast */
 .lbl{font-size:10px;font-weight:600;color:rgba(0,0,0,0.5);letter-spacing:0.8px;text-transform:uppercase}
 .h1{font-size:22px;font-weight:700;color:rgba(0,0,0,0.88);letter-spacing:-0.4px}
 .h2{font-size:16px;font-weight:700;color:rgba(0,0,0,0.85);letter-spacing:-0.2px}
-.body{font-size:12px;color:rgba(0,0,0,0.58);line-height:1.55}
 .pill{display:inline-flex;align-items:center;gap:3px;padding:3px 9px;border-radius:100px;font-size:10px;font-weight:600}
-.pr{background:rgba(255,59,48,0.15);color:#c0251d}.pg{background:rgba(52,199,89,0.18);color:#1e8c3a}.po{background:rgba(255,149,0,0.18);color:#b86800}.pb{background:rgba(0,122,255,0.15);color:#0055b3}.pp{background:rgba(120,80,200,0.15);color:#6030a8}.py{background:rgba(0,0,0,0.08);color:rgba(0,0,0,0.55)}
+.pr{background:rgba(255,59,48,0.15);color:#c0251d}.pg{background:rgba(52,199,89,0.18);color:#1e8c3a}.po{background:rgba(255,149,0,0.18);color:#b86800}.pb{background:rgba(0,122,255,0.15);color:#0055b3}.pp{background:rgba(120,80,200,0.15);color:#6030a8}
 .trk{background:rgba(0,0,0,0.1);border-radius:100px;overflow:hidden}
 .fill{height:100%;border-radius:100px;transition:width 1s ease}
 .fb{background:#007aff}.fg{background:#34c759}.fr{background:#ff3b30}.fo{background:#ff9500}.fp{background:#af52de}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:5px;padding:10px 20px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;transition:all 0.18s;border:none;font-family:inherit;letter-spacing:-0.1px}
-.btn-b{background:#007aff;color:#fff}.btn-b:hover{background:#005ecb;transform:scale(1.02)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:5px;padding:10px 20px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;transition:all 0.18s;border:none;font-family:inherit}
+.btn-b{background:#007aff;color:#fff}.btn-b:hover{background:#005ecb}
 .btn-g{background:rgba(255,255,255,0.5);color:rgba(0,0,0,0.72);border:1px solid rgba(255,255,255,0.65)}.btn-g:hover{background:rgba(255,255,255,0.7)}
-.btn-gr{background:#34c759;color:#fff}.btn-gr:hover{background:#27a644}
-.btn-d{background:rgba(255,59,48,0.1);color:#e0332a}
+.btn-gr{background:#34c759;color:#fff}
 .btn-sm{padding:7px 16px;font-size:12px}
 .div{height:1px;background:rgba(0,0,0,0.08);margin:9px 0}
 .row-item{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:12px;transition:background 0.15s;cursor:pointer}
 .row-item:hover{background:rgba(255,255,255,0.3)}
-.tag{display:inline-flex;padding:3px 9px;border-radius:7px;font-size:10px;font-weight:600;margin:2px;cursor:pointer;transition:all 0.15s}
+.tag{display:inline-flex;padding:3px 9px;border-radius:7px;font-size:10px;font-weight:600;margin:2px}
 .tag-b{background:rgba(0,122,255,0.13);color:#0055b3}.tag-g{background:rgba(52,199,89,0.13);color:#1e8c3a}.tag-p{background:rgba(120,80,200,0.13);color:#6030a8}.tag-o{background:rgba(255,149,0,0.13);color:#b86800}
-.tag:hover{opacity:0.7}
-/* Ring — FIXED: stroke color must be set explicitly for SVG */
+/* Ring */
 .ring-w{position:relative;margin:0 auto}
 .ring-w svg{position:absolute;inset:0;transform:rotate(-90deg)}
 .ring-bg{fill:none;stroke:rgba(0,0,0,0.1);stroke-width:8}
 .ring-fg{fill:none;stroke-width:8;stroke-linecap:round;stroke-dasharray:283}
-.ring-fg.fb{stroke:#007aff}
-.ring-fg.fg{stroke:#34c759}
-.ring-fg.fr{stroke:#ff3b30}
-.ring-fg.fo{stroke:#ff9500}
-.ring-fg.fp{stroke:#af52de}
+.ring-fg.fb{stroke:#007aff}.ring-fg.fg{stroke:#34c759}.ring-fg.fr{stroke:#ff3b30}.ring-fg.fo{stroke:#ff9500}.ring-fg.fp{stroke:#af52de}
 .ring-c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .dim-r{display:flex;align-items:center;gap:8px;margin-bottom:7px}
 .dim-n{font-size:11px;color:rgba(0,0,0,0.52);flex-shrink:0}
@@ -63,11 +55,22 @@ body{font-family:'Inter',-apple-system,sans-serif;overflow:hidden;width:100vw;he
 .chart{display:flex;align-items:flex-end;gap:5px;height:50px}
 .bar{border-radius:4px 4px 0 0;flex:1;min-width:8px}
 .note{font-size:10px;color:rgba(0,0,0,0.5);line-height:1.65}
+
+/* ── Score Drawer (slides in from left) ── */
+#scoreDrawer{
+  position:fixed;top:58px;left:-300px;bottom:76px;width:260px;z-index:150;
+  transition:left 0.35s cubic-bezier(0.34,1.05,0.64,1);
+  display:flex;flex-direction:column;
+}
+#scoreDrawer.open{left:16px}
+#drawerOverlay{position:fixed;inset:0;z-index:140;display:none;background:transparent}
+#drawerOverlay.show{display:block}
 </style>
 </head>
 <body>
 <div class="bg"></div>
 
+<!-- TOP BAR -->
 <div class="topbar">
   <div class="topbar-logo">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="rgba(0,0,0,0.75)" stroke-width="1.8"/><path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4" stroke="#007aff" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -80,90 +83,97 @@ body{font-family:'Inter',-apple-system,sans-serif;overflow:hidden;width:100vw;he
   </div>
 </div>
 
+<!-- SCORE DRAWER (hidden by default) -->
+<div id="drawerOverlay" onclick="closeDrawer()"></div>
+<div id="scoreDrawer" class="glass" style="padding:18px;overflow-y:auto">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+    <div class="lbl">FEAS Score</div>
+    <button class="btn btn-g btn-sm" style="padding:4px 10px;font-size:11px" onclick="closeDrawer()">✕</button>
+  </div>
+  <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
+    <div class="ring-w" style="width:80px;height:80px;flex-shrink:0">
+      <svg viewBox="0 0 80 80">
+        <circle class="ring-bg" cx="40" cy="40" r="34"/>
+        <circle class="ring-fg fb" cx="40" cy="40" r="34" style="stroke-dasharray:214;stroke-dashoffset:49"/>
+      </svg>
+      <div class="ring-c">
+        <div style="font-size:24px;font-weight:800;color:rgba(0,0,0,0.88);line-height:1">77</div>
+        <div style="font-size:9px;color:rgba(0,0,0,0.45)">/100</div>
+      </div>
+    </div>
+    <div>
+      <div class="pill pg" style="margin-bottom:5px">↑ +2.3 this week</div>
+      <div class="pill pb">Top 18%</div>
+    </div>
+  </div>
+  <div class="div"></div>
+  <div class="lbl" style="margin-bottom:8px">Four Dimensions</div>
+  <div class="dim-r"><div class="dim-n" style="width:95px">Physiological</div><div style="flex:1"><div class="trk" style="height:4px"><div class="fill fb" style="width:82%"></div></div></div><div style="font-size:11px;font-weight:700;color:#007aff;width:24px">82</div></div>
+  <div class="dim-r"><div class="dim-n" style="width:95px">Behavioral</div><div style="flex:1"><div class="trk" style="height:4px"><div class="fill fb" style="width:84%"></div></div></div><div style="font-size:11px;font-weight:700;color:#007aff;width:24px">84</div></div>
+  <div class="dim-r"><div class="dim-n" style="width:95px">Emotional Reg.</div><div style="flex:1"><div class="trk" style="height:4px"><div class="fill fg" style="width:88%"></div></div></div><div style="font-size:11px;font-weight:700;color:#34c759;width:24px">88</div></div>
+  <div class="dim-r"><div class="dim-n" style="width:95px">Path Alignment</div><div style="flex:1"><div class="trk" style="height:4px"><div class="fill fo" style="width:61%"></div></div></div><div style="font-size:11px;font-weight:700;color:#ff9500;width:24px">61</div></div>
+  <div class="div"></div>
+  <div class="lbl" style="margin-bottom:6px">30-Day Trend</div>
+  <div class="chart" style="height:40px">
+    <div class="bar" style="height:55%;background:rgba(0,122,255,0.35)"></div><div class="bar" style="height:60%;background:rgba(0,122,255,0.35)"></div><div class="bar" style="height:48%;background:rgba(255,59,48,0.5)"></div><div class="bar" style="height:62%;background:rgba(0,122,255,0.35)"></div><div class="bar" style="height:68%;background:rgba(0,122,255,0.4)"></div><div class="bar" style="height:70%;background:rgba(0,122,255,0.45)"></div><div class="bar" style="height:65%;background:rgba(255,149,0,0.5)"></div><div class="bar" style="height:72%;background:rgba(0,122,255,0.4)"></div><div class="bar" style="height:75%;background:rgba(0,122,255,0.45)"></div><div class="bar" style="height:77%;background:rgba(0,122,255,0.65)"></div>
+  </div>
+  <div class="div"></div>
+  <div class="lbl" style="margin-bottom:6px">My Skills</div>
+  <span class="tag tag-b">Analytical</span><span class="tag tag-p">Coding</span><span class="tag tag-g">Focus</span><span class="tag tag-o">Creative</span><span class="tag tag-g">Science</span>
+  <div style="margin-top:12px">
+    <button class="btn btn-b btn-sm" style="width:100%" onclick="closeDrawer();go(3)">🏆 View Achievements →</button>
+  </div>
+</div>
+
+<!-- BOTTOM NAV -->
 <div class="bottomnav">
-  <div class="ni on" onclick="go(1)" id="n1">📊 Dashboard</div>
-  <div class="ni" onclick="go(2)" id="n2">📅 Today's Log</div>
-  <div class="ni" onclick="go(3)" id="n3">🏆 Achievements</div>
-  <div class="ni" onclick="go(4)" id="n4">🎯 My Path</div>
-  <div class="ni" onclick="go(5)" id="n5">🔮 Age 18</div>
+  <div class="ni on" onclick="goScreen(1)" id="n1">🏠 Dashboard</div>
+  <div class="ni" onclick="toggleDrawer()" id="nScore">📊 My Score</div>
+  <div class="ni" onclick="goScreen(2)" id="n2">📅 Today's Log</div>
+  <div class="ni" onclick="goScreen(3)" id="n3">🏆 Achievements</div>
+  <div class="ni" onclick="goScreen(4)" id="n4">🎯 My Path</div>
+  <div class="ni" onclick="goScreen(5)" id="n5">🔮 Age 18</div>
 </div>
 
 <!-- ══ S1: DASHBOARD ══ -->
 <div class="screen active" id="s1">
-  <div style="display:grid;grid-template-columns:230px 1fr 200px;gap:12px;width:820px;margin-top:10px">
-    <div class="glass" style="padding:20px;display:flex;flex-direction:column;gap:13px">
-      <div class="lbl">FEAS Score</div>
-      <div>
-        <div class="ring-w" style="width:100px;height:100px;margin-bottom:8px">
-          <svg viewBox="0 0 100 100">
-            <circle class="ring-bg" cx="50" cy="50" r="45"/>
-            <circle class="ring-fg fb" cx="50" cy="50" r="45" style="stroke-dashoffset:65"/>
-          </svg>
-          <div class="ring-c">
-            <div style="font-size:30px;font-weight:800;color:rgba(0,0,0,0.88);line-height:1">77</div>
-            <div style="font-size:11px;color:rgba(0,0,0,0.45)">/100</div>
-          </div>
-        </div>
-        <div style="text-align:center;display:flex;gap:4px;justify-content:center;flex-wrap:wrap">
-          <div class="pill pg">↑ +2.3 this week</div>
-          <div class="pill pb">Top 18%</div>
-        </div>
+  <div style="width:520px;margin-top:10px">
+
+    <!-- Today's Activities -->
+    <div class="glass" style="padding:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <div class="h2">Today's Activities</div>
+        <button class="btn btn-sm btn-g" onclick="goScreen(2)" style="font-size:11px">See All →</button>
+      </div>
+      <div class="row-item">
+        <div style="width:32px;height:32px;border-radius:9px;background:rgba(0,122,255,0.12);display:flex;align-items:center;justify-content:center">📐</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:rgba(0,0,0,0.82)">Mathematics Practice</div><div style="font-size:10px;color:rgba(0,0,0,0.48)">75 min</div></div>
+        <div class="pill pg">+4.2</div>
+      </div>
+      <div class="row-item" style="background:rgba(255,59,48,0.06);border-radius:12px">
+        <div style="width:32px;height:32px;border-radius:9px;background:rgba(255,59,48,0.12);display:flex;align-items:center;justify-content:center">😴</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:rgba(0,0,0,0.82)">Unscheduled Rest</div><div style="font-size:10px;color:#c0251d;font-weight:500">⚠ Deviation detected</div></div>
+        <div class="pill pr">−2.8</div>
+      </div>
+      <div class="row-item">
+        <div style="width:32px;height:32px;border-radius:9px;background:rgba(255,149,0,0.12);display:flex;align-items:center;justify-content:center">🎨</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:rgba(0,0,0,0.82)">Art Class</div><div style="font-size:10px;color:rgba(0,0,0,0.48)">60 min · Low alignment</div></div>
+        <div class="pill po">+1.1</div>
+      </div>
+      <div class="row-item">
+        <div style="width:32px;height:32px;border-radius:9px;background:rgba(52,199,89,0.12);display:flex;align-items:center;justify-content:center">📖</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:rgba(0,0,0,0.82)">Science Reading</div><div style="font-size:10px;color:rgba(0,0,0,0.48)">60 min · Path-aligned</div></div>
+        <div class="pill pg">+3.6</div>
+      </div>
+      <div class="row-item">
+        <div style="width:32px;height:32px;border-radius:9px;background:rgba(120,80,200,0.12);display:flex;align-items:center;justify-content:center">🧠</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:rgba(0,0,0,0.82)">Coding Practice</div><div style="font-size:10px;color:rgba(0,0,0,0.48)">45 min · Path-aligned</div></div>
+        <div class="pill pg">+3.1</div>
       </div>
       <div class="div"></div>
-      <div class="lbl" style="margin-bottom:3px">Four Dimensions</div>
-      <div class="dim-r"><div class="dim-n" style="width:105px">Physiological</div><div style="flex:1"><div class="trk" style="height:4px"><div class="fill fb" style="width:82%"></div></div></div><div style="font-size:11px;font-weight:700;color:#007aff;width:24px">82</div></div>
-      <div class="dim-r"><div class="dim-n" style="width:105px">Behavioral</div><div style="flex:1"><div class="trk" style="height:4px"><div class="fill fb" style="width:84%"></div></div></div><div style="font-size:11px;font-weight:700;color:#007aff;width:24px">84</div></div>
-      <div class="dim-r"><div class="dim-n" style="width:105px">Emotional Reg.</div><div style="flex:1"><div class="trk" style="height:4px"><div class="fill fg" style="width:88%"></div></div></div><div style="font-size:11px;font-weight:700;color:#34c759;width:24px">88</div></div>
-      <div class="dim-r"><div class="dim-n" style="width:105px">Path Alignment</div><div style="flex:1"><div class="trk" style="height:4px"><div class="fill fo" style="width:61%"></div></div></div><div style="font-size:11px;font-weight:700;color:#ff9500;width:24px">61</div></div>
-      <div class="div"></div>
-      <div class="lbl" style="margin-bottom:4px">30-Day Trend</div>
-      <div class="chart">
-        <div class="bar" style="height:55%;background:rgba(0,122,255,0.35)"></div><div class="bar" style="height:60%;background:rgba(0,122,255,0.35)"></div><div class="bar" style="height:48%;background:rgba(255,59,48,0.5)"></div><div class="bar" style="height:62%;background:rgba(0,122,255,0.35)"></div><div class="bar" style="height:68%;background:rgba(0,122,255,0.4)"></div><div class="bar" style="height:70%;background:rgba(0,122,255,0.45)"></div><div class="bar" style="height:65%;background:rgba(255,149,0,0.5)"></div><div class="bar" style="height:72%;background:rgba(0,122,255,0.4)"></div><div class="bar" style="height:75%;background:rgba(0,122,255,0.45)"></div><div class="bar" style="height:77%;background:rgba(0,122,255,0.65)"></div>
-      </div>
-    </div>
-
-    <div style="display:flex;flex-direction:column;gap:11px">
-      <div class="glass" style="padding:18px">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-          <div class="h2">Today's Activities</div>
-          <button class="btn btn-sm btn-g" onclick="go(2)" style="font-size:11px">See All →</button>
-        </div>
-        <div class="row-item"><div style="width:30px;height:30px;border-radius:9px;background:rgba(0,122,255,0.12);display:flex;align-items:center;justify-content:center">📐</div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:rgba(0,0,0,0.82)">Mathematics Practice</div><div style="font-size:10px;color:rgba(0,0,0,0.48)">75 min</div></div><div class="pill pg">+4.2</div></div>
-        <div class="row-item" style="background:rgba(255,59,48,0.06);border-radius:12px"><div style="width:30px;height:30px;border-radius:9px;background:rgba(255,59,48,0.12);display:flex;align-items:center;justify-content:center">😴</div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:rgba(0,0,0,0.82)">Unscheduled Rest</div><div style="font-size:10px;color:#c0251d;font-weight:500">Deviation detected</div></div><div class="pill pr">−2.8</div></div>
-        <div class="row-item"><div style="width:30px;height:30px;border-radius:9px;background:rgba(52,199,89,0.12);display:flex;align-items:center;justify-content:center">📖</div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:rgba(0,0,0,0.82)">Science Reading</div><div style="font-size:10px;color:rgba(0,0,0,0.48)">60 min</div></div><div class="pill pg">+3.6</div></div>
-      </div>
-      <div class="glass" style="padding:18px">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-          <div class="h2">Career Path Progress</div>
-          <button class="btn btn-sm btn-g" onclick="go(4)" style="font-size:11px">My Path →</button>
-        </div>
-        <div style="font-size:12px;color:rgba(0,0,0,0.52);margin-bottom:8px;font-weight:500">Engineering Track · Age 12 of 18</div>
-        <div class="trk" style="height:8px;border-radius:6px"><div class="fill fb" style="width:67%;border-radius:6px"></div></div>
-        <div style="display:flex;justify-content:space-between;margin-top:5px">
-          <div style="font-size:9px;color:rgba(0,0,0,0.4);font-weight:500">Birth</div>
-          <div style="font-size:11px;color:#007aff;font-weight:700">67% complete</div>
-          <div style="font-size:9px;color:rgba(0,0,0,0.4);font-weight:500">Age 18</div>
-        </div>
-        <div style="margin-top:12px;padding:10px 12px;border-radius:12px;background:rgba(255,149,0,0.08);border:1px solid rgba(255,149,0,0.25)">
-          <div style="font-size:11px;font-weight:700;color:#b86800;margin-bottom:2px">⚠ Path Alert</div>
-          <div style="font-size:10px;color:rgba(0,0,0,0.58);line-height:1.5">Art engagement +18% this month. Misaligned with Engineering path. Guardian notified.</div>
-        </div>
-      </div>
-    </div>
-
-    <div style="display:flex;flex-direction:column;gap:11px">
-      <div class="glass" style="padding:16px">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-          <div class="lbl">Recent</div>
-          <button class="btn btn-sm btn-g" onclick="go(3)" style="font-size:10px">All →</button>
-        </div>
-        <div class="row-item" style="padding:7px 8px"><div style="font-size:16px">🥇</div><div><div style="font-size:11px;font-weight:600;color:rgba(0,0,0,0.82)">Math Olympiad</div><div style="font-size:9px;color:rgba(0,0,0,0.48)">1st Place · +12.4</div></div></div>
-        <div class="row-item" style="padding:7px 8px"><div style="font-size:16px">💼</div><div><div style="font-size:11px;font-weight:600;color:rgba(0,0,0,0.82)">Tech Internship</div><div style="font-size:9px;color:rgba(0,0,0,0.48)">Summer · +9.8</div></div></div>
-        <div class="row-item" style="padding:7px 8px"><div style="font-size:16px">🔬</div><div><div style="font-size:11px;font-weight:600;color:rgba(0,0,0,0.82)">Science Fair Lead</div><div style="font-size:9px;color:rgba(0,0,0,0.48)">Project · +7.1</div></div></div>
-      </div>
-      <div class="glass" style="padding:14px">
-        <div class="lbl" style="margin-bottom:7px">My Skills</div>
-        <span class="tag tag-b">Analytical</span><span class="tag tag-p">Coding</span><span class="tag tag-g">Focus</span><span class="tag tag-o">Creative</span><span class="tag tag-g">Science</span>
+      <div style="display:flex;justify-content:space-between;font-size:11px;padding:0 4px">
+        <span style="color:rgba(0,0,0,0.48)">Net score today</span>
+        <strong style="color:#007aff">+9.2 pts</strong>
       </div>
     </div>
   </div>
@@ -208,21 +218,11 @@ body{font-family:'Inter',-apple-system,sans-serif;overflow:hidden;width:100vw;he
       <div class="lbl" style="margin-bottom:4px">Achievements & Experiences</div>
       <div class="h1" style="margin-bottom:16px">Your Record</div>
       <div style="display:flex;flex-direction:column;gap:8px">
-        <div style="padding:14px;border-radius:14px;background:rgba(0,122,255,0.06);border:1px solid rgba(0,122,255,0.18);display:flex;align-items:center;gap:14px">
-          <div style="font-size:28px">🥇</div><div style="flex:1"><div style="font-size:14px;font-weight:700;color:rgba(0,0,0,0.88)">Regional Math Olympiad — 1st Place</div><div style="font-size:11px;color:rgba(0,0,0,0.52);margin-top:2px">Competition · Age 11 · Verified by FEAS</div></div><div class="pill pg">+12.4 pts</div>
-        </div>
-        <div style="padding:14px;border-radius:14px;background:rgba(120,80,200,0.06);border:1px solid rgba(120,80,200,0.18);display:flex;align-items:center;gap:14px">
-          <div style="font-size:28px">💼</div><div style="flex:1"><div style="font-size:14px;font-weight:700;color:rgba(0,0,0,0.88)">Junior Tech Camp Internship</div><div style="font-size:11px;color:rgba(0,0,0,0.52);margin-top:2px">Internship · Summer · TechCorp Youth Program</div></div><div class="pill pp">+9.8 pts</div>
-        </div>
-        <div style="padding:14px;border-radius:14px;background:rgba(0,122,255,0.04);border:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;gap:14px">
-          <div style="font-size:28px">🔬</div><div style="flex:1"><div style="font-size:14px;font-weight:700;color:rgba(0,0,0,0.88)">Science Fair Project Lead</div><div style="font-size:11px;color:rgba(0,0,0,0.52);margin-top:2px">Project · Age 11 · Environmental Research</div></div><div class="pill pb">+7.1 pts</div>
-        </div>
-        <div style="padding:14px;border-radius:14px;background:rgba(52,199,89,0.04);border:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;gap:14px">
-          <div style="font-size:28px">🤝</div><div style="flex:1"><div style="font-size:14px;font-weight:700;color:rgba(0,0,0,0.88)">School Robotics Club — Member</div><div style="font-size:11px;color:rgba(0,0,0,0.52);margin-top:2px">Extracurricular · Ongoing · Path-aligned</div></div><div class="pill pg">+5.3 pts</div>
-        </div>
-        <div style="padding:14px;border-radius:14px;background:rgba(255,149,0,0.04);border:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;gap:14px">
-          <div style="font-size:28px">🎨</div><div style="flex:1"><div style="font-size:14px;font-weight:700;color:rgba(0,0,0,0.88)">City Art Exhibition — Participant</div><div style="font-size:11px;color:rgba(0,0,0,0.52);margin-top:2px">Exhibition · Age 12</div></div><div class="pill po">+1.2 pts</div>
-        </div>
+        <div style="padding:14px;border-radius:14px;background:rgba(0,122,255,0.06);border:1px solid rgba(0,122,255,0.18);display:flex;align-items:center;gap:14px"><div style="font-size:28px">🥇</div><div style="flex:1"><div style="font-size:14px;font-weight:700;color:rgba(0,0,0,0.88)">Regional Math Olympiad — 1st Place</div><div style="font-size:11px;color:rgba(0,0,0,0.52);margin-top:2px">Competition · Age 11 · Verified by FEAS</div></div><div class="pill pg">+12.4 pts</div></div>
+        <div style="padding:14px;border-radius:14px;background:rgba(120,80,200,0.06);border:1px solid rgba(120,80,200,0.18);display:flex;align-items:center;gap:14px"><div style="font-size:28px">💼</div><div style="flex:1"><div style="font-size:14px;font-weight:700;color:rgba(0,0,0,0.88)">Junior Tech Camp Internship</div><div style="font-size:11px;color:rgba(0,0,0,0.52);margin-top:2px">Internship · Summer · TechCorp Youth Program</div></div><div class="pill pp">+9.8 pts</div></div>
+        <div style="padding:14px;border-radius:14px;background:rgba(0,122,255,0.04);border:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;gap:14px"><div style="font-size:28px">🔬</div><div style="flex:1"><div style="font-size:14px;font-weight:700;color:rgba(0,0,0,0.88)">Science Fair Project Lead</div><div style="font-size:11px;color:rgba(0,0,0,0.52);margin-top:2px">Project · Age 11 · Environmental Research</div></div><div class="pill pb">+7.1 pts</div></div>
+        <div style="padding:14px;border-radius:14px;background:rgba(52,199,89,0.04);border:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;gap:14px"><div style="font-size:28px">🤝</div><div style="flex:1"><div style="font-size:14px;font-weight:700;color:rgba(0,0,0,0.88)">School Robotics Club — Member</div><div style="font-size:11px;color:rgba(0,0,0,0.52);margin-top:2px">Extracurricular · Ongoing · Path-aligned</div></div><div class="pill pg">+5.3 pts</div></div>
+        <div style="padding:14px;border-radius:14px;background:rgba(255,149,0,0.04);border:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;gap:14px"><div style="font-size:28px">🎨</div><div style="flex:1"><div style="font-size:14px;font-weight:700;color:rgba(0,0,0,0.88)">City Art Exhibition — Participant</div><div style="font-size:11px;color:rgba(0,0,0,0.52);margin-top:2px">Exhibition · Age 12</div></div><div class="pill po">+1.2 pts</div></div>
       </div>
     </div>
     <div style="width:220px;display:flex;flex-direction:column;gap:11px">
@@ -230,14 +230,10 @@ body{font-family:'Inter',-apple-system,sans-serif;overflow:hidden;width:100vw;he
         <div class="lbl" style="margin-bottom:8px">Skill Tags</div>
         <span class="tag tag-b">Analytical Thinking</span><span class="tag tag-b">Problem Solving</span><span class="tag tag-p">Coding Basics</span><span class="tag tag-g">Focus Endurance</span><span class="tag tag-g">Science Literacy</span><span class="tag tag-o">Creative Expression</span><span class="tag tag-g">Team Collaboration</span>
       </div>
-      <div class="glass" style="padding:16px">
-        <div class="lbl" style="margin-bottom:8px">Score Impact</div>
-        <div style="text-align:center;padding:14px 0">
-          <div style="font-size:36px;font-weight:800;color:#007aff">+35.8</div>
-          <div style="font-size:11px;color:rgba(0,0,0,0.52);margin-top:3px">Total lifetime pts from achievements</div>
-        </div>
-        <div class="div"></div>
-        <div class="note">Keep adding path-aligned achievements to strengthen your FEAS profile.</div>
+      <div class="glass" style="padding:16px;text-align:center">
+        <div class="lbl" style="margin-bottom:8px">Total Impact</div>
+        <div style="font-size:36px;font-weight:800;color:#007aff">+35.8</div>
+        <div style="font-size:11px;color:rgba(0,0,0,0.52);margin-top:3px">lifetime pts from achievements</div>
       </div>
     </div>
   </div>
@@ -284,7 +280,7 @@ body{font-family:'Inter',-apple-system,sans-serif;overflow:hidden;width:100vw;he
       <div class="glass" style="padding:14px">
         <div class="note">Career path selection is advisory. At age 18, the system will make the final allocation based on cumulative lifetime data — regardless of current selection.</div>
       </div>
-      <button class="btn btn-b" style="width:100%" onclick="go(5)">See Age 18 Result →</button>
+      <button class="btn btn-b" style="width:100%" onclick="goScreen(5)">See Age 18 Result →</button>
     </div>
   </div>
 </div>
@@ -311,21 +307,40 @@ body{font-family:'Inter',-apple-system,sans-serif;overflow:hidden;width:100vw;he
         <span style="color:rgba(0,0,0,0.4)">No application required. No interview needed.<br>Your life has spoken for itself.</span>
       </div>
     </div>
-    <button class="btn btn-g" onclick="go(1)">← Back to Dashboard</button>
+    <button class="btn btn-g" onclick="goScreen(1)">← Back to Dashboard</button>
   </div>
 </div>
 
 <script>
-let cur=1;
-function go(n){
+let cur=1, drawerOpen=false;
+
+function goScreen(n){
+  closeDrawer();
   document.getElementById('s'+cur).classList.remove('active');
   document.getElementById('n'+cur)?.classList.remove('on');
   cur=n;
   document.getElementById('s'+cur).classList.add('active');
   document.getElementById('n'+cur)?.classList.add('on');
 }
+
+function toggleDrawer(){
+  drawerOpen ? closeDrawer() : openDrawer();
+}
+function openDrawer(){
+  drawerOpen=true;
+  document.getElementById('scoreDrawer').classList.add('open');
+  document.getElementById('drawerOverlay').classList.add('show');
+  document.getElementById('nScore').classList.add('on');
+}
+function closeDrawer(){
+  drawerOpen=false;
+  document.getElementById('scoreDrawer').classList.remove('open');
+  document.getElementById('drawerOverlay').classList.remove('show');
+  document.getElementById('nScore').classList.remove('on');
+}
+
 function selOpt(o){
-  ['optA','optB'].forEach(id=>{const el=document.getElementById(id);if(el){el.classList.remove('sel-a','sel-b')}});
+  ['optA','optB'].forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('sel-a','sel-b')});
   if(o==='A')document.getElementById('optA').classList.add('sel-a');
   else if(o==='B')document.getElementById('optB').classList.add('sel-b');
 }
